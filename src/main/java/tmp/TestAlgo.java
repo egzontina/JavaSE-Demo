@@ -1,4 +1,4 @@
-package Algorithme;
+package tmp;
 
 public class TestAlgo {
 
