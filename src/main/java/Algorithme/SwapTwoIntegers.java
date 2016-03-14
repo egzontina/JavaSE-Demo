@@ -1,6 +1,6 @@
 package Algorithme;
 
-public class swapTwoIntegers {
+public class SwapTwoIntegers {
 
 	public static void main(String[] args) {
 		int a = 10; 
@@ -48,8 +48,6 @@ public class swapTwoIntegers {
  * After swapping, 'x': 60, 'y': 30
 
  */
-		
-
 	}
 
 }
