@@ -6,12 +6,10 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
-
-import utils.Person;
-
 import java.util.Set;
 import java.util.TreeMap;
-import java.util.TreeSet;
+
+import utils.Person;
 
 public class Map_Test {
 

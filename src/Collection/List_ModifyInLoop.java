@@ -5,7 +5,7 @@ import java.util.List;
 import utils.Person;
 import utils.PersonsDB;
 
-public class List_UpadateInLoop {
+public class List_ModifyInLoop {
 
 	public static void main(String[] args) {
 		
