@@ -29,8 +29,7 @@ public class List_SumPropertyInObjectList {
 		});
 
 		long ageSum = personnes.stream().map(e -> e.getAge()).reduce(0, Integer::sum);
-		// OR
-		// long ageSum = personnes.stream().map(e -> e.getAge()).reduce(0, (x, y) -> x + y);
+		// OR :  long ageSum = personnes.stream().map(e -> e.getAge()).reduce(0, (x, y) -> x + y);
 		
 		System.out.println("sum of age : " + ageSum);
 		return ageSum;

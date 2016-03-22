@@ -28,28 +28,16 @@ public class Test_Collection {
 	     System.out.println("=============== TRI de collection ===================================");
 	     trierCollection();
 	     */
-//		System.out.println("=============== TEST ArrayList() ===================================");
-//		arrayListTest();
+		/*
+		System.out.println("=============== TEST ArrayList() ===================================");
+		arrayListTest();
+		*/
 		System.out.println("=============== CONVERT  Array To List ===================================");
 		arrayToList();
 		arrayToListJava8();
 		listToArray();
 	   }
 
-
-	
-	/** *********************************************************************************************
-	CLONER UNE COLLECTION
-	*********************************************************************************************** */
-
-	// TODO
-	public void cloneList() {
-
-		// Collections.Utils
-		// StringUtils (version apache ou spring)
-
-		// addAll : copie une collection sur ue autre
-	}
 	
 	/** *********************************************************************************************
 	CONVERSION TABLEAU <--> COLLECTION
