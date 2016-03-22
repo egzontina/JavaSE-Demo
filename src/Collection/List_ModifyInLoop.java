@@ -29,13 +29,43 @@ public class List_ModifyInLoop {
 	    System.out.println(list);
 	    
 		System.out.println("===================== upated primitive List ===============");
-		list = list.stream().map(x -> "x-" + x).collect(Collectors.toList());
-		System.out.println("replace some item " + list);
+		
+		
+		// String 
 		
 		list.replaceAll(x -> "b" + x);
-		System.out.println("replace All item " + list);
+		System.out.println("String List - replace All item " + list);
+		
+		list.set(0,"D");
+		System.out.println("String List - replace some item " + list);
+				
+		System.out.println("String List - replace some item " + list);
+		
+		list = list.stream().filter(item -> item.equals("D")).map(x -> "x-" + x).collect(Collectors.toList());
+		System.out.println("String List - replace item D : " + list);
+		
+		//  integer
+		// to update item in position index : use list.set(index, newitem) 
+
+		List<Integer> integerList = new ArrayList<>();
+		integerList.add(0, 1);
+		integerList.add(0, 2);
+		integerList.add(0, 3);
+		System.out.println("Integer List " + integerList);
+		
+		integerList.set(0, 8);
+		System.out.println("Integer List " + integerList);
+		
+		
+		
+		
 	}
 	
+	
+	/**
+	 * méthode utilitaire 
+	 * @param personnes
+	 */
 	public static void display(List<Person> personnes) {
 		personnes.forEach(item -> {
 			System.out.println(item.getFirstname() + item.getLastname() + " : " + item.getAge());
