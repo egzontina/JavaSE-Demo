@@ -1,15 +1,15 @@
-package TemplateMethod;
+package TemplateMethod.example1;
 
 public class Template2 extends TemplateClass {
 
 	@Override
 	protected int etape1() {
-		return 10;
+		return 5;
 	}
 
 	@Override
 	protected int etape2() {
-		return 20;
+		return 5;
 	}
 
 }
