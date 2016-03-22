@@ -12,9 +12,9 @@ public class List_Loop {
 
 	public static void main(String[] args) {
 		System.out.println("=============== Parcours avec IERATEUR ===================================");
-
 		System.out.println("=============== Parcours avec BOUCLE ===================================");
 
+		loopwithForeach();
 	}
 
 	public static void loopAndReplace() {
@@ -39,17 +39,7 @@ public class List_Loop {
 		}
 	}
 
-	public static void loopwithIteratorWhile(List<String> list) {
-		// Nous rÃ©cupÃ©rons notre itÃ©rateur
-		Iterator<String> it = list.iterator();
-		while (it.hasNext()) {
-			// nous rÃ©cupÃ©rons lâ€™Ã©lÃ©ment courant
-			String str = it.next();
-			// si nous sommes sur l'Ã©lÃ©ment 4, nous le retirons de la collection
-			if (str.equals("4"))
-				it.remove();
-		}
-	}
+
 
 	/**
 	 * Parcour avec Suppression
@@ -63,24 +53,46 @@ public class List_Loop {
 		boolean b = list2.removeIf(s -> s.length() > 4);
 		System.out.println("List RemoveIf : " + list2);
 	}
+	
+	public static void loopwithIteratorWhile(List<String> list) {
+		// Nous recupérons notre itérrateur
+		Iterator<String> it = list.iterator();
+		while (it.hasNext()) {
+			// nous recupérons l'élément courant
+			String str = it.next();
+			// si nous sommes sur l'élément 4, nous le retirons de la collection
+			if (str.equals("4"))
+				it.remove();
+		}
+	}
 
 	/**
 	 * Parcour avec un foreach
 	 */
 	public static void loopwithForeach() {
 		List<String> items = new ArrayList<>(Arrays.asList("A", "B", "C", "D", "E"));
+		System.out.println("list = " + items);
+		
 		// foreach : lambda
-		items.forEach(System.out::println); // Output : A,B,C,D,E
+		System.out.println("===================== Lambda ===============");
 		items.forEach(item -> { // Output : C
 			if ("C".equals(item)) {
 				System.out.println(item);
 			}
 		});
+		
 		// foreach : method reference
+		System.out.println("===================== method reference ===============");
 		items.forEach(System.out::println); // Output : A,B,C,D,E
 
 		// foreach : Steam and filter
+		System.out.println("===================== stream and filter================");
 		items.stream().filter(s -> s.contains("B")).forEach(System.out::println); // Output : B
+		
+		// can't change liste value with with foreach
+		//The method forEach only iterates through the elements of the list without changing them
+		
+		
 	}
 
 	/**
