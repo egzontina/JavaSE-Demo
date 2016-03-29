@@ -1,2 +1,4 @@
-/bin/
-/target/
+.idea/
+javafx.iml
+target/
+.DS_Store

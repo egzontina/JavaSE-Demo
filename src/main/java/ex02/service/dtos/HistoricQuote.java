@@ -1,7 +1,7 @@
 /**
  * 
  */
-package fr.xebia.blog.service.dtos;
+package ex02.service.dtos;
 
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.codehaus.jackson.annotate.JsonProperty;

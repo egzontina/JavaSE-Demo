@@ -1,8 +1,9 @@
-package ex02;
+package ex02.service;
 
-import fr.xebia.blog.service.dtos.YahooResponse;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
+
+import ex02.service.dtos.YahooResponse;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
