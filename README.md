@@ -11,24 +11,15 @@
 
 
 ## Outils
-
-	eclipse Mars  + e(fx)clipse
-	[Scene Builder 8.0]  (http://gluonhq.com/products/scene-builder/)
 	
-
-
-## Link
-
-
-[FxExperience - JavaFX News, Demos & insigth](http://fxexperience.com/)
+	eclipse Mars  + e(fx)clipse
+	[Scene Builder 8.0](http://gluonhq.com/products/scene-builder/)
 
 
 ### DONE
 
 Demo  : Oracle get started tutorial
 http://docs.oracle.com/javase/8/javafx/get-started-tutorial/get_start_apps.htm
-
-Demo 0 : http://mikarber.developpez.com/tutoriels/java/introduction-javafx/
 
 Demo 1 : Adress App
 http://code.makery.ch/library/javafx-8-tutorial/fr/
@@ -39,8 +30,12 @@ http://xebia.developpez.com/tutoriels/java/concepts-javafx-illustration-exemple/
 
 ### TODO 
 
-
 demo 2 : https://openclassrooms.com/courses/les-applications-web-avec-javafx
+
+
+### Link
+
+[FxExperience - JavaFX News, Demos & insigth](http://fxexperience.com/)
 
 JavaFX 8 Date Picker
 http://code.makery.ch/blog/javafx-8-date-picker/
