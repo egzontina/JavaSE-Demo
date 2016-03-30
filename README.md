@@ -23,19 +23,22 @@
 
 # DONE
 
-ex00 : http://mikarber.developpez.com/tutoriels/java/introduction-javafx/
+Demo 0 : http://mikarber.developpez.com/tutoriels/java/introduction-javafx/
 
-ex01 : http://code.makery.ch/library/javafx-8-tutorial/fr/
+Demo 1 : Adress App
+http://code.makery.ch/library/javafx-8-tutorial/fr/
 
-ex02 : http://blog.xebia.fr/2014/09/01/javafx-8-la-resistance-des-applications-lourdes/
-
+Demo 2 : Stock price App
+http://blog.xebia.fr/2014/09/01/javafx-8-la-resistance-des-applications-lourdes/
+http://xebia.developpez.com/tutoriels/java/concepts-javafx-illustration-exemple/
 
 # TODO 
 
-ex03 : https://openclassrooms.com/courses/les-applications-web-avec-javafx
-
-exXX : Tutoriels officiels d'Oracle
+demo 3 : Tutoriels officiels d'Oracle
 http://docs.oracle.com/javase/8/javafx/get-started-tutorial/get_start_apps.htm
+
+demo 2 : https://openclassrooms.com/courses/les-applications-web-avec-javafx
+
 
 JavaFX 8 Date Picker
 http://code.makery.ch/blog/javafx-8-date-picker/
