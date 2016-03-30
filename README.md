@@ -23,6 +23,10 @@
 
 # DONE
 
+Demo  : Oracle get started tutorial
+http://docs.oracle.com/javase/8/javafx/get-started-tutorial/get_start_apps.htm
+
+
 Demo 0 : http://mikarber.developpez.com/tutoriels/java/introduction-javafx/
 
 Demo 1 : Adress App
@@ -34,8 +38,6 @@ http://xebia.developpez.com/tutoriels/java/concepts-javafx-illustration-exemple/
 
 # TODO 
 
-demo 3 : Tutoriels officiels d'Oracle
-http://docs.oracle.com/javase/8/javafx/get-started-tutorial/get_start_apps.htm
 
 demo 2 : https://openclassrooms.com/courses/les-applications-web-avec-javafx
 
