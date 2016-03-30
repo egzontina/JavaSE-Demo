@@ -1,4 +1,4 @@
-package ex02;
+package demo2;
 
 
 /**
@@ -23,7 +23,7 @@ public class Main extends Application {
         primaryStage.setHeight(600);
         primaryStage.setTitle("Malick - JavaFX Demo");
         // chargement de l'interface principale définie par le fxml 
-        primaryStage.setScene(new Scene((Parent) JfxUtils.loadFxml("/fxml/ex02/screen.fxml"), 1024, 968));
+        primaryStage.setScene(new Scene((Parent) JfxUtils.loadFxml("view/screen.fxml"), 1024, 968));
         primaryStage.show();
     }
 }

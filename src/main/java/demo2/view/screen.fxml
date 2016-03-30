@@ -17,7 +17,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
 	minHeight="-Infinity" minWidth="-Infinity" prefHeight="968.0"
 	prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="ex02.Controller">
+	fx:controller="demo2.view.screenController">
 
 	<children>
 		<VBox>

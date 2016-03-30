@@ -1,7 +1,7 @@
 /**
  * 
  */
-package ex02.service.dtos;
+package demo2.service.dtos;
 
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.codehaus.jackson.annotate.JsonProperty;

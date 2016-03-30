@@ -1,4 +1,4 @@
-package ex02;
+package demo2.view;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -29,9 +29,10 @@ import java.util.ResourceBundle;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import ex02.service.YahooService;
-import ex02.service.dtos.HistoricQuote;
-import ex02.service.dtos.YahooResponse;
+import demo2.JfxUtils;
+import demo2.service.YahooService;
+import demo2.service.dtos.HistoricQuote;
+import demo2.service.dtos.YahooResponse;
 
 /**
  * Controlleur de la scene définit dans screen
@@ -41,7 +42,7 @@ import ex02.service.dtos.YahooResponse;
  * 
  * @author Malick
  */
-public class Controller implements Initializable {
+public class screenController implements Initializable {
 
 	@FXML
 	private TextField code;
@@ -214,7 +215,7 @@ public class Controller implements Initializable {
 		final Stage progressBar = new Stage();
 		progressBar.initModality(Modality.WINDOW_MODAL);
 		progressBar.initOwner(code.getScene().getWindow());
-		progressBar.setScene(new Scene(new Group(JfxUtils.loadFxml("/fxml/ex02/loading.fxml"))));
+		progressBar.setScene(new Scene(new Group(JfxUtils.loadFxml("view/loading.fxml"))));
 		progressBar.show();
 		return progressBar;
 	}

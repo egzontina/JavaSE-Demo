@@ -1,4 +1,4 @@
-package ex02;
+package demo2;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;

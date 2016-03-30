@@ -1,9 +1,9 @@
-package ex02.service;
+package demo2.service;
 
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
 
-import ex02.service.dtos.YahooResponse;
+import demo2.service.dtos.YahooResponse;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
