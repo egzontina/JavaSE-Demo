@@ -52,9 +52,9 @@ public class HelloWorld extends Application {
 		// represented as a hierarchical scene graph of nodes
 		Scene scene = new Scene(root, 300, 250);
 
-		// makes the scene visible in a given pixel size
 		primaryStage.setTitle("Hello World!");
 		primaryStage.setScene(scene);
+		// makes the scene visible in a given pixel size
 		primaryStage.show();
 	}
 

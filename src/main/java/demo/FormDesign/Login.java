@@ -44,7 +44,7 @@ public class Login extends Application {
 		/* Controls */
 
 		Text scenetitle = new Text("Welcome");
-		scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
+		scenetitle.setId("welcome-text");
 		grid.add(scenetitle, 0, 0, 2, 1);
 
 		Label userName = new Label("User Name:");
@@ -69,13 +69,13 @@ public class Login extends Application {
 
 		/* Text control for displaying the message */
 		final Text actiontarget = new Text();
+		actiontarget.setId("actiontarget");
 		grid.add(actiontarget, 1, 6);
 
 		/* Button Event - display the text message when the user presses it */
 		btn.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent e) {
-				actiontarget.setFill(Color.FIREBRICK);
 				actiontarget.setText("Sign in button pressed");
 			}
 		});
@@ -85,8 +85,11 @@ public class Login extends Application {
 
 		// The scene is created with the grid pane as the root nod
 		Scene scene = new Scene(grid, 300, 275);
-		primaryStage.setScene(scene);
 
+		// Initialize the stylesheets Variable
+		scene.getStylesheets().add(Login.class.getResource("Login.css").toExternalForm());
+
+		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
 
