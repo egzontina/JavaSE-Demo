@@ -22,6 +22,7 @@ public class Main extends Application {
         primaryStage.setWidth(800);
         primaryStage.setHeight(600);
         primaryStage.setTitle("Malick - JavaFX Demo");
+        // chargement de l'interface principale définie par le fxml 
         primaryStage.setScene(new Scene((Parent) JfxUtils.loadFxml("/fxml/ex02/screen.fxml"), 1024, 968));
         primaryStage.show();
     }

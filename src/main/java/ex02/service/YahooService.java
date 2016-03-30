@@ -15,9 +15,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-/**
- * Created by Xebia on 13/08/2014.
- */
+
 public class YahooService {
 
     final private Client client = ClientBuilder.newClient();

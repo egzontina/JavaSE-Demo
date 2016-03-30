@@ -10,15 +10,12 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * @author Kiva
- * 
+ * Classe de l'objet retornnée par le service yahoo
+ * @author Malick 
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class HistoricQuote implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 3333460860168856346L;
 
 	@JsonProperty(value = "Date")
