@@ -1,4 +1,4 @@
-package demo4;
+package demo3;
 
 import javafx.application.Application;
 import javafx.scene.Group;
@@ -32,6 +32,9 @@ public class Melordi extends Application {
         Son mon_son = new Son(mon_clavier);
         mon_instru.volume.bind(mon_son.slider.valueProperty());//on lie les deux paramètres
         root.getChildren().add(mon_son);
+        
+        Metronome mon_metronome = new Metronome();
+        root.getChildren().add(mon_metronome);
         
 		primaryStage.setScene(scene);
 		primaryStage.show();

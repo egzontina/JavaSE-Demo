@@ -28,9 +28,7 @@ Demo 2 : Stock price App
 http://blog.xebia.fr/2014/09/01/javafx-8-la-resistance-des-applications-lourdes/
 http://xebia.developpez.com/tutoriels/java/concepts-javafx-illustration-exemple/
 
-### TODO 
-
-Demo 4 : Le Mélordi / Piano Virtuel
+Demo 3 : Le Mélordi / Piano Virtuel
 https://openclassrooms.com/courses/les-applications-web-avec-javafx
 
 
