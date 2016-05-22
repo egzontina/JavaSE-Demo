@@ -10,6 +10,9 @@ public class Triangle extends FigureGeometrique {
 		super(autreTriangle);
 	}
 
+	public Triangle() {
+	}
+
 	public void dessine() {
 		super.dessine();
 		System.out.println("toute pointue");

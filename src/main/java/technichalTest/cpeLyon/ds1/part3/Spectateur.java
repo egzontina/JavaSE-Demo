@@ -10,12 +10,15 @@ public class Spectateur {
 	//… contructors 
 	
 	public Spectateur() {
+		this.age = 18;
+		this.argentDePoche = 10; 
+		System.out.println(toString());
 	}
 
 	public Spectateur(int age, double argentDePoche) {
-		super();
 		this.age = age;
 		this.argentDePoche = argentDePoche;
+		System.out.println(toString());
 	}
 	
 	//… getters and setters 
@@ -35,6 +38,17 @@ public class Spectateur {
 	public void setArgentDePoche(double argentDePoche) {
 		this.argentDePoche = argentDePoche;
 	}
+	
+	//… toString
+	
+	@Override
+	public String toString() {
+		return "[Spectateur] (j'entre en scène :  j'ai " + age + " ans et " + argentDePoche + " euros en poche)";
+	}
+	
+
+	
+
 	
 	
 	
