@@ -162,6 +162,17 @@ public class StringParsing {
 		String decode = code.toString(); 
 		System.out.println("double : " + code + " String : " + decode); 
 	}
+
+	/** ************************** STRING <--> INTEGER ************************** */
+
+	public void stringToInteger() {
+		
+		Integer a = 10;
+		String aS = a.toString();
+		String aS2 = String.valueOf(a);
+		
+	}
+	
 	
 	/** ************************** STRING <--> FLOAT ************************** */
 	
