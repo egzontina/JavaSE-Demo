@@ -8,7 +8,7 @@ import java.io.IOException;
 
 import javax.swing.ImageIcon;
 
-import chap04_Operator_Expression.Clavier;
+import Annexe_Utils.Clavier;
 
 public class BarreDesTaches {
 	public static void main(String args[]) throws AWTException, IOException {

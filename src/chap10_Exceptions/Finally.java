@@ -1,6 +1,6 @@
 package chap10_Exceptions;
 
-import chap04_Operator_Expression.Clavier;
+import Annexe_Utils.Clavier;
 
 class Point5 {
 	public Point5(int x, int y) throws ErrConst4 {

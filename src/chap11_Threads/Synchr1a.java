@@ -1,6 +1,6 @@
 package chap11_Threads;
 
-import chap04_Operator_Expression.Clavier;
+import Annexe_Utils.Clavier;
 
 public class Synchr1a {
 	public static void main(String args[]) {

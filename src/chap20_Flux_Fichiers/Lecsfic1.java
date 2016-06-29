@@ -5,7 +5,7 @@ import java.io.EOFException;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-import chap04_Operator_Expression.Clavier;
+import Annexe_Utils.Clavier;
 
 public class Lecsfic1 {
 	public static void main(String args[]) throws IOException {

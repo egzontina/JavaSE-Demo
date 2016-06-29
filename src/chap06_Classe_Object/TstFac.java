@@ -1,6 +1,6 @@
 package chap06_Classe_Object;
 
-import chap04_Operator_Expression.Clavier;
+import Annexe_Utils.Clavier;
 
 class Util1 {
 	public static long fac(long n) {

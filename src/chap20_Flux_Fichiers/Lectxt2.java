@@ -6,7 +6,7 @@ import java.io.IOException;
 // pour StringTokenizer
 import java.util.StringTokenizer;
 
-import chap04_Operator_Expression.Clavier;
+import Annexe_Utils.Clavier;
 
 public class Lectxt2 {
 	public static void main(String args[]) throws IOException {

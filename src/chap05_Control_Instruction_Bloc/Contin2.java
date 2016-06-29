@@ -1,7 +1,7 @@
 
 package chap05_Control_Instruction_Bloc;
 
-import chap04_Operator_Expression.Clavier;
+import Annexe_Utils.Clavier;
 
 public class Contin2 {
 	public static void main(String args[]) {

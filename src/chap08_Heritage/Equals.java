@@ -1,6 +1,6 @@
 package chap08_Heritage;
 
-import chap04_Operator_Expression.Clavier;
+import Annexe_Utils.Clavier;
 
 class Point {
 	public Point(int abs, int ord) {

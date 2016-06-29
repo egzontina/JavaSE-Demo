@@ -1,6 +1,6 @@
 package chap07_Arrays;
 
-import chap04_Operator_Expression.Clavier;
+import Annexe_Utils.Clavier;
 
 public class Moyenne {
 	public static void main(String args[]) {

@@ -1,6 +1,6 @@
 package chap10_Exceptions;
 
-import chap04_Operator_Expression.Clavier;
+import Annexe_Utils.Clavier;
 
 public class ExcStd1 {
 	public static void main(String args[]) {

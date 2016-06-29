@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
 
-import chap04_Operator_Expression.Clavier;
+import Annexe_Utils.Clavier;
 
 public class Ens1a {
 	public static void main(String args[]) {

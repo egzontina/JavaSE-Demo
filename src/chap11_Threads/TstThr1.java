@@ -1,6 +1,6 @@
 package chap11_Threads;
 
-import chap04_Operator_Expression.Clavier;
+import Annexe_Utils.Clavier;
 
 public class TstThr1 {
 	public static void main(String args[]) {

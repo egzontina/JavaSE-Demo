@@ -1,4 +1,4 @@
-package chap04_Operator_Expression;
+package Annexe_Utils;
 
 /**
  * classe fournissant des fonctions de lecture au clavier -
@@ -7,8 +7,9 @@ package chap04_Operator_Expression;
 import java.io.*;
 
 public class Clavier {
-	public static String lireString() // lecture d'une chaine
-	{
+
+	// lecture d'une chaine
+	public static String lireString() {
 		String ligne_lue = null;
 		try {
 			InputStreamReader lecteur = new InputStreamReader(System.in);
@@ -20,8 +21,8 @@ public class Clavier {
 		return ligne_lue;
 	}
 
-	public static float lireFloat() // lecture d'un float
-	{
+	// lecture d'un float
+	public static float lireFloat() {
 		float x = 0; // valeur a lire
 		try {
 			String ligne_lue = lireString();
@@ -33,7 +34,8 @@ public class Clavier {
 		return x;
 	}
 
-	public static double lireDouble() // lecture d'un double
+	// lecture d'un double
+	public static double lireDouble() 
 	{
 		double x = 0; // valeur a lire
 		try {
@@ -46,7 +48,8 @@ public class Clavier {
 		return x;
 	}
 
-	public static int lireInt() // lecture d'un int
+	// lecture d'un int
+	public static int lireInt() 
 	{
 		int n = 0; // valeur a lire
 		try {

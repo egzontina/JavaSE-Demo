@@ -5,7 +5,7 @@ import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-import chap04_Operator_Expression.Clavier;
+import Annexe_Utils.Clavier;
 
 class MaFenetre extends JFrame {
 	// .....

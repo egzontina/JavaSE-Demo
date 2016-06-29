@@ -3,7 +3,7 @@ package chap20_Flux_Fichiers;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
-import chap04_Operator_Expression.Clavier;
+import Annexe_Utils.Clavier;
 
 public class Accdir1 {
 	public static void main(String args[]) throws IOException {

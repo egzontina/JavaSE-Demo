@@ -3,7 +3,7 @@ package chap22_Collections;
 import java.util.LinkedList;
 import java.util.ListIterator;
 
-import chap04_Operator_Expression.Clavier;
+import Annexe_Utils.Clavier;
 
 public class Liste2 {
 	public static void main(String args[]) {
