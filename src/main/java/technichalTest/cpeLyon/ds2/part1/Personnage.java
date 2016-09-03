@@ -10,6 +10,12 @@ public abstract class Personnage implements Personnages {
 		this.presentation();
 	}
 
+	/** CORRECTION Q3 : Ajout contructeur avec les paramètres nom et boissonFavorite */
+	public Personnage(String nom, String boissonFavorite) {
+		this.nom = nom;
+		this.boissonFavorite = boissonFavorite;
+		this.presentation();
+	}
 	public void parle(String parole) {
 		System.out.println("(" + quel_est_ton_nom() + ") - " + parole);
 	}
@@ -20,7 +26,7 @@ public abstract class Personnage implements Personnages {
 
 	public final void presentation() {
 		parle("Bonjour. Je suis " + quel_est_ton_nom() + " et j'aime le " + que_bois_tu() + ".");
-		presentationSpecifique();
+		// presentationSpecifique();
 	}
 
 	protected abstract void presentationSpecifique();

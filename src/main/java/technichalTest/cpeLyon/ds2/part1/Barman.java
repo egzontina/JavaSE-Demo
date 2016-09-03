@@ -4,10 +4,13 @@ public class Barman extends Personnage implements Barmans {
 
 	private String bar;
 
+	/** CORRECTION Q3 : modification la référence au constructeur mère  */
 	public Barman(String nom, String bar) {
-		super(nom);
+		super(nom, "vin"); // appelle le constructeur de la classe mère  
 		this.bar = bar;
-		boissonFavorite = "Vin";
+		// boissonFavorite = "Vin";
+		presentationSpecifique();
+
 	}
 
 	public Barman(String nom) {
@@ -20,7 +23,7 @@ public class Barman extends Personnage implements Barmans {
 	}
 
 	protected void presentationSpecifique() {
-		parle("Je suis barman au bar " + bar + ".");
+		parle("Je suis barman au bar [" + this.bar + "].");
 	}
 
 	public void parle(String parole) {
@@ -30,4 +33,6 @@ public class Barman extends Personnage implements Barmans {
 	public String quel_est_ton_nom() {
 		return "Barman " + super.quel_est_ton_nom();
 	}
+	
+	
 }

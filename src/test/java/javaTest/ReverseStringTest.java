@@ -51,9 +51,11 @@ public class ReverseStringTest {
 	    doTestReverse(s, expected);
 	}
 
+	
 	private void doTestReverse(final String s, final String expected) {
 	    // Act
-	    final String result = ReverseString.reverse(s);
+	    //final String result = ReverseString.reverseWithStringBulder(s);
+	    final String result = ReverseString.reverseWithoutStringBulder(s);	    
 
 	    // Assert
 	    Assert.assertEquals(expected, result);
