@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+
+<!-- fichier de description de l'interface principale -->
+<!-- fx:controller permet de binder les element fxml directement sur les 
+	classe java -->
+<!-- (VBox) ou (HBox) : « boites » permettent d’aligner leurs enfants automatiquement 
+	de manière verticale ou horizontale -->
+
+<!-- CONTENEUR PRINCIPALE -->
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="968.0"
+	prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="demo2.view.screenController">
+
+	<children>
+		<VBox>
+			<children>
+				<!-- FORMULAIRE -->
+				<HBox prefWidth="200.0">
+					<children>
+						<Label prefHeight="16.0" prefWidth="187.0" text="Code action" />
+						<TextField fx:id="code" prefWidth="150.0" />
+					</children>
+					<padding>
+						<Insets left="10.0" top="10.0" />
+					</padding>
+				</HBox>
+				<HBox prefWidth="200.0">
+					<children>
+						<!-- Liste statique définissant le nombres de durées dans le menu déroulant -->
+						<Label prefHeight="16.0" prefWidth="187.0" text="Période (mois)" />
+						<ChoiceBox fx:id="duration" prefHeight="26.0" prefWidth="150.0">
+							<items>
+								<FXCollections fx:factory="observableArrayList">
+									<Integer fx:value="3" />
+									<Integer fx:value="4" />
+									<Integer fx:value="5" />
+									<Integer fx:value="6" />
+									<Integer fx:value="7" />
+									<Integer fx:value="8" />
+									<Integer fx:value="9" />
+									<Integer fx:value="10" />
+									<Integer fx:value="11" />
+									<Integer fx:value="12" />
+								</FXCollections>
+							</items>
+						</ChoiceBox>
+					</children>
+					<padding>
+						<Insets left="10.0" top="10.0" />
+					</padding>
+				</HBox>
+				<!-- Bouton SUBMIT -->
+				<HBox>
+					<children>
+						<Button mnemonicParsing="false" onAction="#run" text="Lancer" />
+					</children>
+					<VBox.margin>
+						<Insets left="10.0" top="10.0" />
+					</VBox.margin>
+				</HBox>
+				<!-- // FIN FORMULAIRE -->
+
+				<!-- TABLEAU de resultats -->
+				<HBox fx:id="hboxTable" prefWidth="200.0" visible="false">
+					<children>
+						<TableView fx:id="tableView" prefHeight="150.0">
+							<columns>
+								<TableColumn minWidth="100.0" prefWidth="75.0" text="Date"
+									fx:id="columnDate">
+									<cellValueFactory>
+										<PropertyValueFactory property="date" />
+									</cellValueFactory>
+								</TableColumn>
+								<TableColumn minWidth="100.0" prefWidth="75.0" text="Prix">
+									<cellValueFactory>
+										<PropertyValueFactory property="Close" />
+									</cellValueFactory>
+								</TableColumn>
+								<TableColumn minWidth="100.0" prefWidth="75.0" text="Volume">
+									<cellValueFactory>
+										<PropertyValueFactory property="Volume" />
+									</cellValueFactory>
+								</TableColumn>
+							</columns>
+						</TableView>
+					</children>
+					<VBox.margin>
+						<Insets left="10.0" top="20.0" />
+					</VBox.margin>
+				</HBox>
+				<!-- GRAPHIQUE -->
+				<HBox fx:id="hboxGraph" visible="false">
+					<children>
+					</children>
+					<padding>
+						<Insets left="10.0" top="20.0" />
+					</padding>
+				</HBox>
+			</children>
+		</VBox>
+	</children>
+</AnchorPane>
