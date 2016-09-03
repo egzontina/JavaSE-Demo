@@ -1,0 +1,19 @@
+table {
+    width: 100%;
+}
+
+td {
+    padding: 10px;
+}
+
+.homme {
+    background-color: blue;
+}
+
+.femme {
+    background-color: pink;
+}
+
+.adresse {
+    font-style: italic;
+}
