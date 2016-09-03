@@ -1,9 +1,0 @@
-ValidatorConfiguration.is_project_specific=true
-eclipse.preferences.version=1
-org.eclipse.xtext.grammar.BidirectionalReference=warning
-org.eclipse.xtext.grammar.DiscouragedName=ignore
-org.eclipse.xtext.grammar.DuplicateEnumLiteral=warning
-org.eclipse.xtext.grammar.InvalidMetaModelName=ignore
-org.eclipse.xtext.grammar.InvalidPackageReference.external=ignore
-org.eclipse.xtext.grammar.InvalidPackageReference.notOnClasspath=warning
-org.eclipse.xtext.grammar.InvalidTerminalRuleName=ignore
