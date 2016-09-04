@@ -1,8 +1,6 @@
 # Java FX demo project
 
-
-## Test de la création d'applications desktop avec JavaFX
-
+Test de la création d'applications desktop avec JavaFX
 
 
 ## technos
