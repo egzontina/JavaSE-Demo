@@ -6,6 +6,12 @@ import java.util.List;
 
 import utils.Person;
 
+/**
+ * Class demo to test : browse a Collection List
+ * 
+ * @author Malick
+ *
+ */
 public class List_Loop {
 
 	public static void main(String[] args) {
@@ -56,11 +62,13 @@ public class List_Loop {
 	}
 
 	/**
-	 * Parcour avec boucle traditionnelle USE :quand vous devez parcourir plusieurs collections en parallèle
+	 * Parcours unidirectionnel d’une collection avec for... each
+	 * permet de simplifier le parcours d’une collection
 	 */
 	public static void loopwithFor(List<String> list) {
 		// way 1
 		for (String item : list) {
+		    // item prend successivement la valeur de chacune des références des éléments de la collection.
 			System.out.println(item);
 		}
 
@@ -78,7 +86,12 @@ public class List_Loop {
 	 * thread-safe (ConcurrentModificationException) alors qu'en utilisant un for, on ne se prémunit pas d'une
 	 * modification en cours de lecture. for est plus long potentiellement. ca hausse le niveau d'abstraction Niveau
 	 * perf, pour une ArrayList, ça revient au même d'utiliser un Iterator ou de faire des get(index) dans une boucle
-	 * for would be not being able to remove items with for-each
+	 * 
+	 * not possible to remove or add items with for-each
+	 * 
+	 * To USE : quand vous devez parcourir plusieurs collections en parallèle
+	 * 
+	 * 
 	 * 
 	 */
 
