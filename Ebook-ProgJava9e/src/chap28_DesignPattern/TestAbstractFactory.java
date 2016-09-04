@@ -1,4 +1,7 @@
 package chap28_DesignPattern;
+
+/** famille objets : Bouton Radio */
+
 abstract class BoutonRadio {
 	public abstract String type();
 }
@@ -14,6 +17,8 @@ class BoutonRadioB extends BoutonRadio {
 		return "Bouton radio style B";
 	}
 }
+
+/** famille objets : Case à cocher */
 
 abstract class CaseCocher {
 	public abstract String identification();
@@ -31,9 +36,12 @@ class CaseCocherB extends CaseCocher {
 	}
 }
 
+/**
+ * Interface/classeAbstraite commune des Fabriques
+ */
+
 abstract class FabriqueAbstraite {
 	abstract BoutonRadio creerBoutonRadio();
-
 	abstract CaseCocher creerCaseCocher();
 }
 
@@ -57,7 +65,13 @@ class FabriqueStyleB extends FabriqueAbstraite {
 	}
 }
 
-public class TestFabriqueAbstraite0 {
+/**
+ * Main client Class
+ * 
+ * @author Malick
+ *
+ */
+public class TestAbstractFactory {
 	public static void main(String args[]) {
 		BoutonRadio br1, br2;
 		CaseCocher cc;

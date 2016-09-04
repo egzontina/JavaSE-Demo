@@ -2,10 +2,8 @@ package chap28_DesignPattern;
 import java.util.*; // pour ArrayList
 
 abstract class Composant {
-	public void ajoute(Composant c) {
-	}
 
-	public abstract void affiche(); // a redefinir dans chaque classe concrete
+	private String nom;
 
 	public Composant(String nom) {
 		this.nom = nom;
@@ -14,9 +12,14 @@ abstract class Composant {
 	public String getNom() {
 		return nom;
 	}
+	
+	public void ajoute(Composant c) {
+	}
 
-	private String nom;
+	public abstract void affiche(); // a redefinir dans chaque classe concrete
 }
+
+/** FORMES */
 
 class Cercle extends Composant {
 	public Cercle(String nom) {
@@ -38,7 +41,12 @@ class Rectangle extends Composant {
 	}
 }
 
+/** GROUPES */
+
 class Groupe extends Composant {
+
+	private ArrayList<Composant> listeComposants = new ArrayList<Composant>();
+
 	public Groupe(String nom) {
 		super(nom);
 	}
@@ -48,18 +56,25 @@ class Groupe extends Composant {
 	}
 
 	public void affiche() {
-		System.out.println("---- Groupe " + getNom() + " contenant : ");
+		// show group info
+		System.out.println("-------- Groupe " + getNom() + " contenant : ");
+		// show component info
 		for (Composant c : listeComposants) {
 			c.affiche();
-		} // depuis JDK5
-		System.out.println("-------- fin groupe " + getNom());
+		}
 	}
 
-	private ArrayList<Composant> listeComposants = new ArrayList<Composant>();
 }
 
+/**
+ * Main client Class
+ * 
+ * @author Malick
+ *
+ */
 public class TestComposite {
 	public static void main(String args[]) {
+		
 		Cercle c1 = new Cercle("C1");
 		Cercle c2 = new Cercle("C2");
 		Rectangle r1 = new Rectangle("R1");
