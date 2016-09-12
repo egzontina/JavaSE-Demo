@@ -67,7 +67,7 @@ public class List_RemoveInLoop {
      * Interface LISTITERATOR
      * parcourir à l’envers une une liste chaînée (du type LinkedList)
      */
-    public static void ReverseBrowserWithLinkedList(LinkedList<String> l) {
+    public static void ReverseBrowserWithListIterator(LinkedList<String> l) {
 	ListIterator<String> iter;
 	iter = l.listIterator(l.size()); /* position courante : fin de liste */
 	while (iter.hasPrevious()) {
