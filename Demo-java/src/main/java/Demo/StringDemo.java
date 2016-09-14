@@ -10,7 +10,7 @@ public class StringDemo {
 		
 		String newLine = System.getProperty("line.separator");
 		
-		// Stream Un stream sur les lettres qui composent une String 
+		// Un stream sur les lettres qui composent une String 
 		String s = "bonjour" ;		 
 		IntStream stream = s.chars() ;
 		System.out.println("stream foreach map :") ;

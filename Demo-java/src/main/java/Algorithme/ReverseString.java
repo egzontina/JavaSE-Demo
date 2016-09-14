@@ -6,6 +6,14 @@ package Algorithme;
  */
 public class ReverseString {
 
+    
+    	
+    public static void main(String[] args) {
+	System.out.println("reverseWithStringBulder(\"Malick DIOP\") : " + reverseWithStringBulder("Malick DIOP"));
+	System.out.println("Malick DIOP.toCharArray() =>" + "Malick DIOP".toCharArray());
+	System.out.println("Malick DIOP.split() =>" + "Malick DIOP".split(" ").toString());
+}
+    
 	/**
 	 * Reserve String With StringBuilder.reverse()
 	 * 

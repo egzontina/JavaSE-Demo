@@ -1,4 +1,4 @@
-package daktic.codingame;
+package puzzles.facile;
 
 /**
  * Hello world!

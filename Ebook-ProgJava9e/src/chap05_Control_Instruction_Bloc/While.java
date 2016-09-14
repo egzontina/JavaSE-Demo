@@ -2,7 +2,7 @@ package chap05_Control_Instruction_Bloc;
 
 import Annexe_Utils.Clavier;
 
-public class While1 {
+public class While {
 	public static void main(String args[]) {
 		int n, som;
 		som = 0;

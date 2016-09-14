@@ -2,7 +2,7 @@ package chap05_Control_Instruction_Bloc;
 
 import Annexe_Utils.Clavier;
 
-public class Do1 {
+public class Do {
 	public static void main(String args[]) {
 		int n;
 		do {

@@ -26,8 +26,7 @@ class Temperature {
             int T;
             int min = Integer.MAX_VALUE;
             int arrayTemps[] = Stream.of(temps.split("\\s+")).mapToInt(Integer::parseInt).toArray(); 
-            /* Search the temperature of minimum absolute valueReads
-               Note a subtilty of the exercice : a temperature T>0 is prefered over -T */
+            /* Search the temperature of minimum absolute valueReads*/
             for (int i = 0; i < n; i++) {
                 T = arrayTemps[i];
                 if (Math.abs(T) < Math.abs(min) || (T == -min && T > 0))
