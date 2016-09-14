@@ -1,0 +1,33 @@
+# EditorConfig helps developers define and maintain consistent
+# coding styles between different editors and IDEs
+# editorconfig.org
+# You can Change these settings to your own preference
+# But We recommend you to keep these unchanged
+
+# top-most EditorConfig fil
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+# Set default charset
+charset = utf-8
+
+trim_trailing_whitespace = true
+
+
+# 4 space indentation
+indent_style = space
+indent_size = 4
+
+
+[*.md]
+trim_trailing_whitespace = false
+
+# 2 space indentation for package.json and bower.json
+# Matches the exact files either package.json, bower.json
+[{package,bower}.json]
+indent_style = space
+indent_size = 2
