@@ -5,7 +5,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import Algorithme.StringAnagramCheck;
+import algorithm.StringAnagramCheck;
 
 public class StringAnagramTest {
 

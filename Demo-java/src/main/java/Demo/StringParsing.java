@@ -18,6 +18,21 @@ public class StringParsing {
 	
 	public static void main(String args[]) {
 
+
+	    /** ************************** INT to CHAR ************************** */
+	    // TODO check for encoder ? ascii, UTF-16, etc ..
+	    int myInt = 65; 
+	    int i = 97; // 97 is 'a' in ASCII
+	    Character.toChars(myInt); // returns ['A']
+	    char c = (char) i; // c is now 'a'
+	    // transforming the integer 1 into the character '1', (Only for integers 0 - 9)
+	    int i2 = 5;
+	    char c2 = (char) ('0' + i); // c2 is now '5';
+	    // or
+	    if (i2 >= 0 && i <= 9) {
+	        char c3 = Character.forDigit(i, 10);
+	        }
+	    /** ************************** Char to String ************************** */
 	}	
 	
 	
@@ -41,6 +56,15 @@ public class StringParsing {
 
 	}
 
+	   /** ************************** STRING <--> INTEGER ************************** */
+
+    public void stringToInteger() {
+        
+        Integer a = 10;
+        String aS = a.toString();
+        String aS2 = String.valueOf(a);
+        
+    }
 
 	/** ************************** STRING to LONG ************************** */
 	/**
@@ -163,15 +187,7 @@ public class StringParsing {
 		System.out.println("double : " + code + " String : " + decode); 
 	}
 
-	/** ************************** STRING <--> INTEGER ************************** */
 
-	public void stringToInteger() {
-		
-		Integer a = 10;
-		String aS = a.toString();
-		String aS2 = String.valueOf(a);
-		
-	}
 	
 	
 	/** ************************** STRING <--> FLOAT ************************** */
