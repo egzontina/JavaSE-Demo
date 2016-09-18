@@ -58,6 +58,8 @@ class AsciiArt {
 
     /**
      * Main Method
+     * <p>
+     * My Solution
      */
     public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
@@ -114,4 +116,30 @@ class AsciiArt {
         in.close();
 
     }
+
+    /**
+     * Other Published Solution - Best Upvoted 
+     * 
+     * @author Malick
+     */
+    public static void solution() {
+        Scanner in = new Scanner(System.in);
+        int L = in.nextInt();
+        in.nextLine();
+        int H = in.nextInt();
+        in.nextLine();
+        String T = in.nextLine().toUpperCase();
+        for (int i = 0; i < H; i++) {
+            String row = in.nextLine();
+            for (int j = 0; j < T.length(); ++j) {
+                int index = T.charAt(j) - 'A'; // 'E'=69, 'A' = 65, 'Z'=90
+                if (index < 0 || index >= 26) {
+                    index = 26; // '?'
+                }
+                System.out.print(row.substring(index*L, (index*L) + L));
+            }
+            System.out.println();
+        }
+    }
+
 }

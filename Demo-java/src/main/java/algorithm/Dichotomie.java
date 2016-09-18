@@ -12,12 +12,15 @@ import java.util.Map;
  * <p>
  * l'algorithme de dichotomie permettant de trouver une valeur val dans un tableau t de N+1 entiers trié par ordre
  * croissant
+ * 
+ * @see  https://openclassrooms.com/courses/recherche-dichotomique
  */
 public class Dichotomie {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
 
+        
     }
 
     /**

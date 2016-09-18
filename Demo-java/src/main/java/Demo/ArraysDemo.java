@@ -17,11 +17,13 @@ public class ArraysDemo {
         // int array[] = CastArrayStringToArrayInt2("1 2");
         // Arrays.stream(array).forEach(x -> System.out.println(x));
 
-        String[] arrayOfStrings = { "a", "a", "a", "a" };
-        printArrayInString(arrayOfStrings);
+        // String[] arrayOfStrings = { "a", "a", "a", "a" };
+        // printArrayInString(arrayOfStrings);
 
-        String[] names = { "Java", "JavaScript", "Python", "C", "Ruby", "Java" };
-        findDuplicateElementsInArray(names);
+        // String[] names = { "Java", "JavaScript", "Python", "C", "Ruby", "Java" };
+        // findDuplicateElementsInArray(names);
+
+        bytesArrayToBinaryString();
 
     }
 
@@ -54,14 +56,12 @@ public class ArraysDemo {
 
         // java 8 print
         System.out.println("String.join : " + String.join(",", array));
-        
+
         // print 2D array
         int rows = 5;
         int columns = 3;
         int[][] array2D = new int[rows][columns];
         System.out.println("Arrays.deepToString : " + Arrays.deepToString(array));
-
-        
 
     }
 
@@ -88,6 +88,7 @@ public class ArraysDemo {
      * System.arraycopy() qui fait appel à du code natif. System.arrayCopy copies into an existing array.
      * <p>
      * Arrays.copyOf does not only copy elements, it also creates a new array.
+     * 
      * @see http://www.javapractices.com/topic/TopicAction.do?Id=3
      */
     public int[] coppyOfArray(final int myArray[]) {
@@ -159,6 +160,64 @@ public class ArraysDemo {
             }
         }
 
+    }
+
+    /**
+     * CAST Array of byte to Binary String
+     * <p>
+     * The usual way is to use String#getBytes() to get the underlying bytes and then present those bytes in some other
+     * form (hex, binary whatever). getBytes() is enough for dealing with ASCII
+     * 
+     * @param arr
+     */
+    public static void bytesArrayToBinaryString() {
+        try {
+            String str = "this is plain text";
+            byte[] infoBin = null;
+            infoBin = str.getBytes();
+            StringBuilder binary = new StringBuilder();
+            for (byte b : infoBin) {
+                String binTemp = Integer.toBinaryString(b);
+                if (binTemp.length() < 8)
+                    binTemp = "0" + binTemp;
+                binary.append(" " + binTemp);
+            }
+            System.out.println("Text : " + str);
+            System.out.println("binArray : " + Arrays.toString(infoBin));
+            System.out.println("binResult : " + binary.toString());
+
+        } catch (Exception e) {
+            System.err.println(e.toString());
+        }
+    }
+
+    public static void conversionToBinary() {
+        String str = "foo";
+        StringBuilder binaryMsg = new StringBuilder("");
+        for (char c : str.toCharArray()) {
+            // convert character to its binary ascii code (7 bits)
+            String binChar = Integer.toBinaryString(c);
+            if (binChar.length() < 7)
+                binChar = "0" + binChar;
+            binaryMsg.append(binChar);
+        }
+        System.out.println("'" + str + "' to binary: " + binaryMsg.toString());
+
+    }
+
+    public static void conversionToBinary2() {
+        String s = "foo";
+        byte[] bytes = s.getBytes();
+        StringBuilder binary = new StringBuilder();
+        for (byte b : bytes) {
+            int val = b;
+            for (int i = 0; i < 8; i++) {
+                binary.append((val & 128) == 0 ? 0 : 1);
+                val <<= 1;
+            }
+            binary.append(' ');
+        }
+        System.out.println("'" + s + "' to binary: " + binary);
     }
 
     /**

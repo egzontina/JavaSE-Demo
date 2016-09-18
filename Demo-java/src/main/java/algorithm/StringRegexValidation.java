@@ -1,11 +1,22 @@
 package algorithm;
 
+import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class StringRegexValidation {
 	
 	
+    public static void main(String args[]) {
+        
+        
+        // split binnary between every group of same characters
+        String str = "aaabbbcczzzz";
+        String regex = "(?<=(.))(?!\\1)";
+        String[] arr = str.split(regex);
+        System.out.println(str + " => " + Arrays.toString(arr));
+    }
+    
     /**
      * Regular expression in Java to check if String is number or not
      */
@@ -30,10 +41,22 @@ public class StringRegexValidation {
     }
     
     /**
-     * 
+     * check if string contain only letter
      */
-    public void isString() { 
+    public boolean isString(String str) { 
     	
+        String expression = "^[a-zA-Z]*$";
+        Pattern pattern = Pattern.compile(expression);
+        // return Pattern.matches(expression, str);
+        
+        // or 
+        
+        //Java 8
+        boolean allLetters = str.chars().allMatch(x -> Character.isLetter(x));
+        // str.chars().allMatch(Character::isLetter);
+        
+        // or
+        return str.matches("[a-zA-Z]+");
     }
     
 	/**

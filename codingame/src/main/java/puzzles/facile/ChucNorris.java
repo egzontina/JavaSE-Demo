@@ -30,7 +30,7 @@ import java.math.*;
  * 0 < N < 100
  * </pre>
  **/
-class ChucNorris {
+class ChuckNorris {
 
     public static void main(String args[]) {
         Scanner in = new Scanner(System.in);

@@ -16,33 +16,22 @@ class ThereIsNoSpoon {
         int height = in.nextInt(); // the number of cells on the Y axis
         in.nextLine();
 
-        // To debug: System.err.println("Debug messages...");
-        System.err.println("width...: " + width);
-        System.err.println("height...:" + height);
-
         // matrice : row = height, column = width
         String strPuceArray[][] = new String[height][width];
 
         for (int i = 0; i < height; i++) {
             String line = in.nextLine(); // width characters, each either 0 or .
 
-            System.err.println("line...:" + line);
             String strArray[] = line.split(""); // // array lengt = width
-            System.err.println("strArray[]...: " + Arrays.toString(strArray));
-
+            
             for (int j = 0; j < strArray.length; j++) {
                 strPuceArray[i][j] = strArray[j];
             }
         }
 
-        // To debug: System.err.println("Debug messages...");
-        System.err.println("Matrice strPuceArray[][]...:" + Arrays.deepToString(strPuceArray));
-
-        // note : diferrently in table data structure, the rign on current node is i+1, (eg: for (0,0) it's (1,0) not
-        // (0,1)
+        // note : diferrence node loop
         // in table data structure : route of the loop is : (i,j) -> (i,j+1) .. -> (i+1,j), (i+1, j+1)...last
         // in game ennonciate text : route of the loop is : (u,v) -> (u+1,v) .. -> (u,v+1), (u+1, v+1)...
-
         // solution : make corrspondance
         // U evolve/increment together J
         // V evolve/increment together I
@@ -50,19 +39,19 @@ class ThereIsNoSpoon {
         int v = 0;
 
         for (int i = 0; i < height; i++) {
-
             v = i;
 
             for (int j = 0; j < width; j++) {
-
                 u = j;
 
                 String celChar = strPuceArray[i][j];
                 StringJoiner stringJoiner = new StringJoiner(" ");
-                stringJoiner.add(String.valueOf(i)).add(String.valueOf(j));
 
                 // Cell contain node
                 if (celChar.equals("0")) {
+
+                    // stringJoiner.add(String.valueOf(i)).add(String.valueOf(j));
+                    stringJoiner.add(String.valueOf(u)).add(String.valueOf(v));
 
                     // THE RIGTH
                     // if it's last cell in width, no righ cell
@@ -72,60 +61,57 @@ class ThereIsNoSpoon {
                     // the righ of current node
                     else {
                         // check until first node in right
-                        boolean isNodeFoundOnTheBottom = false;
-                        int counter = 0;
+                        boolean isNodeFoundOnTheRight = false;
+                        int counterRight = 1;
                         int z = j + 1;
-                        while (!isNodeFoundOnTheBottom && z < width) {
-                            counter++;
+                        while (!isNodeFoundOnTheRight && z < width) {
                             if (strPuceArray[i][z].equals("0")) {
                                 // stringJoiner.add(String.valueOf(i)).add(String.valueOf(j+counter));
-                                stringJoiner.add(String.valueOf(u + counter)).add(String.valueOf(v));
-                                isNodeFoundOnTheBottom = true;
+                                stringJoiner.add(String.valueOf(u + counterRight)).add(String.valueOf(v));
+                                isNodeFoundOnTheRight = true;
                             }
                             z++;
+                            counterRight++;
                         }
                         // si on arrive au dernier à droite sans avoir trouvé de node
-                        if (isNodeFoundOnTheBottom = false) {
+                        if (isNodeFoundOnTheRight == false) {
                             stringJoiner.add("-1 -1");
                         }
                     }
 
                     // THE BOTTOM
                     // if it's last cell in eight, no bottom cell
-                    if ((i == height - 1)) {
+                    if (i == height - 1) {
                         stringJoiner.add("-1 -1");
                     }
-                    // the righ of current node
+                    // the Bottom of current node
                     else {
-                        // check until first node in right
-                        boolean isNodeFoundOnTheRight = false;
-                        int counter = 0;
+                        // check until first node in ottom
+                        boolean isNodeFoundOnTheBottom = false;
+                        int counterBottom = 1;
                         int z = i + 1;
-                        while (!isNodeFoundOnTheRight && z < height) {
-                            counter++;
+                        while (!isNodeFoundOnTheBottom && z < height) {
                             if (strPuceArray[z][j].equals("0")) {
                                 // the bottom of current node
                                 // stringJoiner.add(String.valueOf(i + counter)).add(String.valueOf(j));
-                                stringJoiner.add(String.valueOf(u)).add(String.valueOf(v + counter));
-                                isNodeFoundOnTheRight = true;
+                                stringJoiner.add(String.valueOf(u)).add(String.valueOf(v + counterBottom));
+                                isNodeFoundOnTheBottom = true;
                             }
                             z++;
+                            counterBottom++;
                         }
                         // si on arrive au dernier à droite sans avoir trouvé de node
-                        if (isNodeFoundOnTheRight = false) {
+                        if (isNodeFoundOnTheBottom == false) {
                             stringJoiner.add("-1 -1");
                         }
                     }
 
+                    // print line with Three coordinates: a node, its right neighbor, its bottom neighbor
+                    String outputLineForNode = stringJoiner.toString();
+                    System.out.println(outputLineForNode);
+
                 }
 
-                // Cell empty
-                else
-                    stringJoiner.add("-1 -1 -1 -1");
-
-                // print line with Three coordinates: a node, its right neighbor, its bottom neighbor
-                String outputLineForNode = stringJoiner.toString();
-                System.out.println(outputLineForNode);
             }
 
         }
