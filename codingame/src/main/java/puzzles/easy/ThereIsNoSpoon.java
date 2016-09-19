@@ -1,4 +1,4 @@
-package puzzles.facile;
+package puzzles.easy;
 
 import java.util.*;
 import java.util.stream.Stream;
