@@ -4,8 +4,10 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 import java.util.Map.Entry;
+import java.util.Set;
+import java.util.stream.DoubleStream;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class ArraysDemo {
@@ -43,6 +45,55 @@ public class ArraysDemo {
         }
     }
 
+    /**
+     * ARRAYS SUM
+     * <p>
+     * compute or calculate the sum of all elements in an array
+     * <p>
+     * Java 8 Streams contains reduce operations which provides an internal implementation of sum that enables a
+     * cleaner, more maintainable, and eloquent of way of handling summing all elements in an array than above.
+     */
+    public static void arraySum() {
+        double[] numbers = { 1, 24, 45, 62, 85, 8, 91, 3, 5, 56, 9 };
+
+        // java
+        double total = 0;
+        for (double element : numbers) {
+            total += element;
+        }
+        // java 8
+        double total2 = DoubleStream.of(numbers).sum();
+        // or
+        double total3 = Arrays.stream(numbers).sum();
+        // or
+        Arrays.stream(numbers).reduce(0L, (x, y) -> x + y);
+        // or
+        Arrays.stream(numbers).reduce(0L, Double::sum);
+        
+        
+        // be careful
+        int[] arr = new int[]{Integer.MIN_VALUE, Integer.MIN_VALUE};
+        long sum = Arrays.stream(arr).sum(); // Wrong: sum == 0
+        long sum2 = Arrays.stream(arr).mapToLong(Long::valueOf).sum(); // Correct
+
+    }
+    
+    /**
+     * 
+     */
+    public static void getSumTwoMultilieArray() {
+      //in this example a[] and b[] are same length
+        int[] a = {1,2,3};
+        int[] b = {1,2,3};
+
+        int[] result = new int[a.length];
+        result = IntStream.range(0, a.length).map(i -> a[i] * b[i]).toArray();
+        
+        //map or filter
+        Arrays.stream(a).map(n -> n * 2);
+        Arrays.stream(a).filter(n -> n % 4 == 0);
+
+    }
     /**
      * Print ARRAYS to String
      */

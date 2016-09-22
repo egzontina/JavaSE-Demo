@@ -12,6 +12,9 @@ import java.math.*;
  * </p>
  * 
  * @see http://dootrix.com/graph-theory-codingame-puzzlw-walkthrough-skynet-the-virus/
+ * @see http://ethiery.vvv.enseirb-matmeca.fr/CGsolo/skynet-the-virus.html
+ *      <p>
+ * @see http://ethiery.vvv.enseirb-matmeca.fr/CGsolo/skynet-the-virus.html
  **/
 class SkynetRevolution1 {
 
@@ -54,8 +57,8 @@ class SkynetRevolution1 {
             Path[] shortestPaths = new Path[E];
             int minLength = Integer.MAX_VALUE;
             Path pathToCut = null;
-            
-            for (int i = 0 ; i < E ; i++) {
+
+            for (int i = 0; i < E; i++) {
                 shortestPaths[i] = new Path(nodes[SI], exits[i], nodes);
                 int length = shortestPaths[i].length();
                 if ((length != 0) && (length < minLength)) {
@@ -63,13 +66,14 @@ class SkynetRevolution1 {
                     pathToCut = shortestPaths[i];
                 }
             }
-            
+
             cut(pathToCut.getNode(0), pathToCut.getNode(1));
         }
     }
 
     /**
      * Serve the link between the given nodes
+     * 
      * @param n1
      * @param n2
      */
@@ -114,7 +118,7 @@ class Node {
 }
 
 /**
- * <b> Path is the class representing a path in the network, by a list of nodes </b>
+ * Path is the class representing a path in the network, by a list of nodes
  */
 class Path {
     private LinkedList<Node> p;

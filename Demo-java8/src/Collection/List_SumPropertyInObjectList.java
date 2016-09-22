@@ -6,7 +6,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.concurrent.atomic.LongAdder;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import utils.Person;
 import utils.PersonsDB;
@@ -54,7 +56,9 @@ public class List_SumPropertyInObjectList {
 		Integer sumInteger = randomIntegerList.stream().map((i) -> i).reduce(0,
 				(accumulator, _item) -> accumulator + _item);
 
-		
+		// or
+        int sum = integers.parallelStream().reduce(0, Integer::sum);
+
 		
 		return sumInteger;
 		
@@ -66,8 +70,36 @@ public class List_SumPropertyInObjectList {
 		long sumLong = randomLongList.stream().map((i) -> (long) i).reduce(0L,
 				(accumulator, _item) -> accumulator + _item);
 		*/
+		
+		
 
 	}
+	/**
+	 * 
+	 * @return
+	 */
+    public static Integer getSumList2() {
+        
+        Map<String, Integer> integers = new HashMap<>();
+        integers.put("un", 1);
+        
+        Integer sumMapInteger = integers.values().stream().mapToInt(i -> i).sum();
+        // or
+        integers.values().stream().mapToInt(i -> i.intValue()).sum();
+        integers.values().stream().mapToInt(Integer::intValue).sum();
+        integers.values().stream().mapToInt(Integer::intValue).sum();
+        integers.values().stream().reduce(0, Integer::sum);
+        //integers.values().stream().collect(summingInt(Integer::intValue));
+        integers.values().stream().mapToInt(i -> i).reduce(0, (x,y) -> x+y); // for map
+
+        // or
+        LongAdder a = new LongAdder();
+        integers.values().parallelStream().forEach(a::add);
+        Integer sum = a.intValue();
+        
+        return sumMapInteger;
+    }
+
 
 
 	/**
