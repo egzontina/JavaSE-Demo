@@ -26,9 +26,9 @@ public class Chap3_DatesAndTimes {
 
         // workingWithPeriod();
 
-        // formatting();
+         formatting();
 
-        // parsing();
+//         parsing();
 
     }
 
@@ -116,7 +116,7 @@ public class Chap3_DatesAndTimes {
         Period quarterly = Period.ofMonths(3); // every 3 months
         Period everyThreeWeeks = Period.ofWeeks(3); // every 3 weeks
         Period everyOtherDay = Period.ofDays(2); // every 2 days
-        Period everyYearAndAWeek = Period.of(1, 0, 7); // every year and 7 days
+        Period everyYearAndAWeek = Period.of(1, 0, 7); // every (1 year, O month, and 7 days)
 
         // what objects it can be used wit
         Period period = Period.ofMonths(1);
@@ -165,6 +165,7 @@ public class Chap3_DatesAndTimes {
 
         // first way : method to get data, would be more work than necessary.
         System.out.println(date.getDayOfWeek()); // MONDAY
+        System.out.println(date.getDayOfMonth()); // 20
         System.out.println(date.getMonth()); // JANUARY
         System.out.println(date.getYear()); // 2020
         System.out.println(date.getDayOfYear()); // 20
@@ -199,7 +200,8 @@ public class Chap3_DatesAndTimes {
         DateTimeFormatter mediumTimeFormtter = DateTimeFormatter.ofLocalizedTime(FormatStyle.MEDIUM);
         System.out.println(time.format(shortTimeFormtter)); // 11:12
         System.out.println(time.format(mediumTimeFormtter)); // 11:12:34
-
+        System.out.println(dateTime.format(shortTimeFormtter)); // 11:12
+        
         // customized Patter formatter
         DateTimeFormatter customizedFormatter = DateTimeFormatter.ofPattern("MMMM dd, yyyy, hh:mm");
         System.out.println(dateTime.format(customizedFormatter)); // January 20, 2020, 11:12

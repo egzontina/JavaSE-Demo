@@ -9,7 +9,8 @@ public class Chap3_String {
      */
     public static void main(String args[]) {
 
-        builderString();
+//        builderString();
+        commonMethods();
     }
 
     /**
@@ -72,8 +73,10 @@ public class Chap3_String {
 
         /* length() */
         String string = "animals";
+        String stringWithWhiteSpace = "animals Dog";
         System.out.println(string.length()); // 7
-
+        System.out.println(stringWithWhiteSpace.length()); // 11
+        
         /* charAt() */
         String string2 = "animals";
         System.out.println(string2.charAt(0)); // a

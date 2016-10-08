@@ -3,6 +3,7 @@ package OCA;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -18,7 +19,7 @@ public class Chap3_ArrayList {
 
         // commonMethod();
 
-        // autoboxing
+        autoboxing();
 
         // conversion();
 
@@ -57,6 +58,8 @@ public class Chap3_ArrayList {
             System.out.println("remove hawk = " + birds.remove("hawk")); // prints true
             System.out.println("remove index 0 = " + birds.remove(0)); // prints hawk
             System.out.println("list after remove() = " + birds); // []
+            System.out.println("remove empty array = " + birds.remove("hawk")); // print false
+            System.out.println("remove empty array with index 0 = " + birds.remove(0)); // IndexOutOfBoundsException
 
             List<Integer> numbers = new ArrayList<>();
             numbers.add(1);
@@ -140,6 +143,35 @@ public class Chap3_ArrayList {
         System.out.println("array = " + Arrays.toString(array)); // [new, test]
         // list.remove(1); // throws UnsupportedOperation Exception, not allowed to change size of list
 
+    }
+
+    /**
+     * Autoboxing
+     */
+    public static void autoboxing() {
+        List<Integer> ages = new ArrayList<>();
+        ages.add(Integer.parseInt("5"));
+        ages.add(Integer.valueOf("5"));
+        ages.add(7);
+        ages.add(null);
+        for (Integer age : ages) {
+            System.out.println(age);
+        }
+        /*
+         * output 5 5 7 null
+         */
+    }
+
+    /**
+     * Equality
+     */
+    public static void equality() {
+        List<String> one = new ArrayList<String>();
+        one.add("abc");
+        List<String> two = new ArrayList<>();
+        two.add("abc");
+        System.out.println(one == two); // false | the variables do not point to the same object
+        System.out.println(one.equals(two)); // true | same element in the same order
     }
 
     /**

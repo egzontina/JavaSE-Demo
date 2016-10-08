@@ -4,12 +4,12 @@ import java.util.Arrays;
 
 public class Chap3_Arrays {
 
-    
     public static void main(String args[]) {
 
         // looping();
         // sorting();
-        multidimensionalArrays();
+        // multidimensionalArrays();
+        equality();
     }
 
     /**
@@ -65,7 +65,7 @@ public class Chap3_Arrays {
      * Search in array
      */
     public static void searching() {
-        int[] numbers = { 2, 4, 6, 8 }; // sorted array.
+        int[] numbers = { 2, 4, 6, 8 }; // sorted array.return index of searched keys
         System.out.println(Arrays.binarySearch(numbers, 2)); // 0
         System.out.println(Arrays.binarySearch(numbers, 4)); // 1
         System.out.println(Arrays.binarySearch(numbers, 1)); // -1
@@ -91,7 +91,7 @@ public class Chap3_Arrays {
         rectangle[0][1] = "set";
 
         /* asymmetric arrays */
-        
+
         int[][] differentSize = { { 1, 4 }, { 3 }, { 9, 8, 7 } };
 
         int[][] args = new int[2][];
@@ -117,10 +117,15 @@ public class Chap3_Arrays {
 
     }
 
+    /**
+     * EQUALITY of two array
+     */
     public static void equality() {
         // equality
         String[] bugs = { "cricket", "beetle", "ladybug" };
+        String[] bugs2 = { "cricket", "beetle", "ladybug" };
         String[] alias = bugs;
+        System.out.println(bugs.equals(bugs2)); // false
         System.out.println(bugs.equals(alias)); // true
         System.out.println(bugs == alias); // true
         System.out.println(Arrays.toString(bugs)); // [cricket, beetle, ladybug]
