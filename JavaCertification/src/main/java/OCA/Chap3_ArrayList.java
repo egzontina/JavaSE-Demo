@@ -48,7 +48,7 @@ public class Chap3_ArrayList {
             System.out.println("birds.get(1) = " + birds.get(1));
 
         }
-        // remve()
+        // remove()
         {
             System.out.println(newLine + "========= remove() ");
             birds = new ArrayList<>();
@@ -70,6 +70,17 @@ public class Chap3_ArrayList {
             numbers.remove(new Integer(2)); // to force wrapper class use.
             System.out.println(numbers); // [1]
 
+        }
+        // remove if
+        {
+            System.out.println(newLine + "========= removeIf() ");
+            List<String> bunnies = new ArrayList<>();
+            bunnies.add("long ear");
+            bunnies.add("floppy");
+            bunnies.add("hoppy");
+            System.out.println(bunnies); // [long ear, floppy, hoppy]
+            bunnies.removeIf(s -> s.charAt(0) != 'h');
+            System.out.println(bunnies); // [hoppy]
         }
         // set()
         {

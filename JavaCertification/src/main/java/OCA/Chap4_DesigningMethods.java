@@ -126,5 +126,24 @@ class testClasse8 {
     }
 }
 
+/**
+ * Overloading Methods
+ * @see Page 191
+ */
+class testClasse9 {
+    
+    public void fly(int numMiles) { }
+    public void fly(Integer numMiles) { }
+    public void fly(short numFeet) { }
+    public boolean fly() { return false; }
+    void fly(int numMiles, short numFeet) { }
+    public void fly(short numFeet, int numMiles) throws Exception { }
+    // public int fly(int numMiles) { } // DOES NOT COMPILE
+    // public static void fly(int numMiles) { } // DOES NOT COMPILE
+
+    public void fly(int[] lengths) { }
+    // public void fly(int... lengths) { } // DOES NOT COMPILE, Java treats varargs as if they were an array. 
+
+}
 
 //@formatter:on
