@@ -1,4 +1,4 @@
-package ITwTest.other;
+package ITwTest;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

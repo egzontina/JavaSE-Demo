@@ -1,4 +1,4 @@
-package ITwTest.other;
+package ITwTest;
 
 // @formatter:off
 

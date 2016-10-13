@@ -1,4 +1,4 @@
-package ITwTest.other;
+package ITwTest;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -120,9 +120,9 @@ class C {
  */
 class TestExo4 {
     public static void main(String[] args) {
-        B b1 = new B(); 
-        B b2 = new B(2003); 
-        B b3 = new B("Bonjour");
+        B2 b1 = new B2(); 
+        B2 b2 = new B2(2003); 
+        B2 b3 = new B2("Bonjour");
         
         System.out.println(b1.x + " et " + b2.x + " et encore " + b3.x ); 
         
@@ -140,21 +140,21 @@ class TestExo4 {
 }
 
 
-class A {
+class A2 {
     public int x;
-    public A() { x = 5; }
+    public A2() { x = 5; }
 }
 
-class B extends A {
+class B2 extends A2 {
 
-    public B() { x++; }
+    public B2() { x++; }
 
-    public B(int i) {
+    public B2(int i) {
         this();
         x = x + i;
     }
 
-    public B(String s) {
+    public B2(String s) {
         super();
         x--;
     }
