@@ -5,6 +5,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 /**
  * 
 /**
@@ -16,7 +17,7 @@ import java.io.ObjectOutputStream;
  * @see http://thecodersbreakfast.net/index.php?post/2011/05/07/Serializing-non-serializable-objects
  *
  */
-public class TestSerializePojo {
+public class TestSerialize {
 
 	public static void main(String[] args) throws Exception {
 		
@@ -42,5 +43,30 @@ public class TestSerializePojo {
         bais.close();
         return o;
     }
+}
 
+/**
+ * il suffit de l'insérer dans un ObjectOutputStream pour qu'il soit
+ * automatiquement pris en charge par le m�canisme de s�rialisation standard.
+ * Inversement, un ObjectInputStream permet tout aussi facilement de le
+ * reconstituer en m�moire � partir de sa forme compress�e.
+ * 
+ * @author Malick
+ *
+ */
+class Pojo implements Serializable {
+
+    private final String msg;
+
+    public Pojo(String msg) {
+        this.msg = msg;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public String toString() {
+        return "Pojo says : " + msg;
+    }
 }

@@ -1,5 +1,6 @@
 package ITwTest;
 
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class QuizInfoTem {
     public static void main(String[] args) {
@@ -7,24 +8,33 @@ public class QuizInfoTem {
 }
 
 /**
- * Q4 | 
+ * Q4 | Exception | try-catch-finally
  */
 class TestClass4 {
     public static void main(String[] args) {
-            try { 
-                return; 
-            } 
-            finally {
-                System.out.println( "Finally" ); 
-            } 
-    } 
+        try {
+            return;
+        } finally {
+            System.out.println("Finally");
+        }
+    }
 }
 
 /**
- * Q5 | 
+ * Q5 | total number of instance  of the classe
  */
 
-class A1 {}
+class A1 {
+    private static AtomicInteger COUNTER = new AtomicInteger(0);
+
+    A1() {
+        COUNTER.incrementAndGet();
+    }
+
+    public static int getNbInstance() {
+        return COUNTER.intValue();
+    }
+}
 
 class ClassTest5 {
     public static void main(String[] args) {
@@ -32,61 +42,80 @@ class ClassTest5 {
         x = new A1();
         A1 y = x;
         A1 z = new A1();
+
+        System.out.println("nombe d'instance de A1 = " + A1.getNbInstance()); 
         
-        /** Combien d'instance de la classe A1 créee le code suivant ? */
-        /* Réponse :
-         * Il y a deux instances de A1 crees par les deux new, la premiére
-         * est référencée par x et y, la deuxiéme par z.
-         */
+        // output : nombre d'instane de A1 : 2
     }
 }
 
 /**
- * Q5 | Combien d'instance de la lasse Point crée le code suivant
+ * Q5 | total number of instance  of the classe
  */
 class Point {
+
+    private static AtomicInteger COUNTER = new AtomicInteger();
+
     private static Point centerPoint = new Point();
-    
+
     private int my_x = 0;
     private int my_y = 0;
 
-    private static int counter = 0;
-
     public Point() {
-        counter++;
+        COUNTER.incrementAndGet();
+        // System.out.println("point defaut = " + getNbInstance());
     }
+
     public Point(int x, int y) {
-        counter++;
-        my_x=x;
-        my_y=y;
+        COUNTER.incrementAndGet();
+        // System.out.println("point "+x+" "+y+" = " + getNbInstance());
+
+        my_x = x;
+        my_y = y;
         centerPoint = new Point();
+    }
+
+    public static int getNbInstance() {
+        return COUNTER.intValue();
     }
     
     public static void main(String[] args) {
-    Point p1 = new Point(1,1);
-    Point p2 = new Point(2,2);
-    System.out.println("counter = " + counter); // 4
+        Point p1 = new Point(1, 1);
+        Point p2 = new Point(2, 2);
+        System.out.println("nombe d'instance de la classe Point = " + Point.getNbInstance()); 
+        
+        // output :  nombe d'instance de la classe Point = 5
     }
 }
 
 /**
- * Q6
+ * Q6 | constructeur 
  */
 
-class G {
- public G() {
-     System.out.println("Ciao");
- }
- public G(int i) {
-     this();
-     System.out.println("Bonjour " + i);
- }
-}
-class ClassTest6 {
-    public static void main(String[] args) {
-        G b = new G(2007); // ouput : Ciao Bonjour 2007
+class B1 {
+    public B1(){
+        System.out.println("Ciao");
+    }
+
+    public B1(int i) {
+        this(); 
+        System.out.println("Bonjour " + i);
     }
 }
+
+class ClassTest6 {
+    public static void main(String[] args) {
+        B1 b = new B1(2007); // ouput : CiaoBonjour 2007
+        
+        /*
+         * Léinstruction invoque le constructeur avec un argument entier (2003). 
+         * Ce dernier appelle explicitement le constructeur sans arguments (this()) qui imprime éCiaoé,
+         * et ensuite le message éBonjour 2003é est imprimé. 
+         * */
+    }
+}
+
+
 
 /**
  * Q7 | L'héritage : les Méthodes
@@ -167,26 +196,33 @@ class ClassTest11 {
     }
 }
 
-
 /**
  * Q14
  */
 // create an anonymous inner class from within class Baar ?
-// 
+//
 class Boo {
-    Boo (String s) {}
-    Boo () {}
-}
-class Bar extends Boo {
-    Bar (String s) { super(); }
-    Bar () {}
-    void zoo() {
-        //   ::    INSERE ODE HERE      
-        Boo f = new Bar(){};
+    Boo(String s) {
+    }
+
+    Boo() {
     }
 }
 
+class Bar extends Boo {
+    Bar(String s) {
+        super();
+    }
 
+    Bar() {
+    }
+
+    void zoo() {
+        // :: INSERE ODE HERE
+        Boo f = new Bar() {
+        };
+    }
+}
 
 /**
  * Q15

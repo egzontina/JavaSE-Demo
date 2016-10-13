@@ -1,9 +1,14 @@
 package ITwTest.other;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 /**
  * Main Class
  */
-public class Exo1 {
+public class Exo_1_to_6 {
     public static void main(String[] args) {
     }
 
@@ -75,36 +80,12 @@ class TestExo2 {
     }
 }
 
+
+
 /**
- * Exo 3
+ * Exo 3 | Référence vs Object
  */
 class TestExo3 {
-    public static void main(String[] args) {
-        /** quéaffichera léinstruction suivante ??         */
-        B1 monB = new B1(2003); // CiaoBonjour 200
-        
-        /* Réponse : 
-         * Léinstruction invoque le constructeur avec un argument entier (2003). 
-         * Ce dernier appelle explicitement le constructeur sans arguments (this()) qui imprime éCiaoé,
-         * et ensuite le message éBonjour 2003é est imprimé. */
-    }
-}
-
-class B1 {
-    public B1(){
-        System.out.println("Ciao");
-    }
-
-    public B1(int i) {
-        this(); 
-        System.out.println("Bonjour " + i);
-    }
-}
-
-/**
- * Exo 4
- */
-class TestExo4 {
     public static void main(String[] args) {
         
         /** qu' affichera le code suivant? */
@@ -135,7 +116,53 @@ class C {
 }
 
 /**
- * Exo 5
+ * Exo 4 | Référence vs Object
+ */
+class TestExo4 {
+    public static void main(String[] args) {
+        B b1 = new B(); 
+        B b2 = new B(2003); 
+        B b3 = new B("Bonjour");
+        
+        System.out.println(b1.x + " et " + b2.x + " et encore " + b3.x ); 
+        
+        // output :  6 et 2009 et encore 4
+        
+        /* Le constructeur B() n'appelle pas explicitement this() et super(). 
+         * Donc, par convention, le constructeur de la super-classe A est appelé implicitement avant de procéder.  
+         * Le constructeur B(2003) appelle le constructeur précédent avec le this(), 
+         * ce qui donne b2.x=6. Ensuite on y ajoute 2003, ce qui donne finalement b2.x=2009 
+         * Le constructeur B(Bonjour) appelle le constructeur de la super-classe A avec le super(). Ceci donne b3.x=5. 
+         * Ensuite on le decr�mente et on a finalement b3.x=4.
+         * 
+         */
+    }
+}
+
+
+class A {
+    public int x;
+    public A() { x = 5; }
+}
+
+class B extends A {
+
+    public B() { x++; }
+
+    public B(int i) {
+        this();
+        x = x + i;
+    }
+
+    public B(String s) {
+        super();
+        x--;
+    }
+}
+
+
+/**
+ * Exo 5 |Inhéritance 
  */
 class Parent {}
 
@@ -193,5 +220,51 @@ class TestExo5 {
          * Cannot cast parent to child
          * est un downcasting impossible, comme dans le premier
          */
+    }
+}
+
+/**
+ * Exo 6 | ArrayList 
+ */
+class TestExo6 {
+    public static void main(String[] args) {
+        /*
+         * When list declared, I still can add to ArrayList new elements, remove
+         * elements and update it. when an array is declared as final, the state
+         * of the object stored in the array can be modified
+         */
+        final List<String> stList = new ArrayList<String>(Arrays.asList("a", "b", "c"));
+        System.out.println(stList);
+
+        stList.add("d");
+
+        System.out.println(stList);
+
+        /*
+         * what is effect making it's final? 
+         * This means that i cannot rebind the
+         * variable to point to a different collection instance you can't
+         * re-assign its reference.
+         */
+        final List<Integer> list = new ArrayList<Integer>();
+        // list = new ArrayList<Integer>(); 
+        // Since `list' is final, this won't compile
+        // The final local variable list cannot be assigned. It must be blank
+        // and not using a compound assignment
+
+        /*
+         * if If i wish, you can prevent insertion, removal etc by using
+         * Collections.unmodifiableList()
+         * 
+         */
+        final List<Integer> list2 = Collections.unmodifiableList(new ArrayList<Integer>(Arrays.asList(1, 2, 3)));
+        System.out.println("list2 unmodifiableList :" + list2);
+        list2.add(4); // throw exception
+        System.out.println("list2 add() : " + list2);
+
+        /*
+         * Which advantages/disadvantages we can get by making ArrayList (or
+         * other Collection) final?
+         */  
     }
 }
