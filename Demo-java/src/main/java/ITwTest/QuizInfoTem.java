@@ -7,6 +7,41 @@ public class QuizInfoTem {
 }
 
 /**
+ * Q4 | 
+ */
+class TestClass4 {
+    public static void main(String[] args) {
+            try { 
+                return; 
+            } 
+            finally {
+                System.out.println( "Finally" ); 
+            } 
+    } 
+}
+
+/**
+ * Q5 | 
+ */
+
+class A1 {}
+
+class ClassTest5 {
+    public static void main(String[] args) {
+        A1 x, u, v;
+        x = new A1();
+        A1 y = x;
+        A1 z = new A1();
+        
+        /** Combien d'instance de la classe A1 créee le code suivant ? */
+        /* Réponse :
+         * Il y a deux instances de A1 crees par les deux new, la premiére
+         * est référencée par x et y, la deuxiéme par z.
+         */
+    }
+}
+
+/**
  * Q5 | Combien d'instance de la lasse Point crée le code suivant
  */
 class Point {
@@ -131,6 +166,27 @@ class ClassTest11 {
         System.out.println("i=" + i); // 12
     }
 }
+
+
+/**
+ * Q14
+ */
+// create an anonymous inner class from within class Baar ?
+// 
+class Boo {
+    Boo (String s) {}
+    Boo () {}
+}
+class Bar extends Boo {
+    Bar (String s) { super(); }
+    Bar () {}
+    void zoo() {
+        //   ::    INSERE ODE HERE      
+        Boo f = new Bar(){};
+    }
+}
+
+
 
 /**
  * Q15

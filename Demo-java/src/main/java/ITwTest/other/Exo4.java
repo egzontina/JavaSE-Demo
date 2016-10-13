@@ -28,9 +28,6 @@ public class Exo4 {
 		 * 
 		 */
 		
-		
-		
-
 	}
 
 }

@@ -28,12 +28,6 @@ class Cat extends Animal {
 
 }
 
-class Application2 {
-    static String getAnimalName(Animal a) {
-        return a.getName();
-    }    
-}
-
 class Application {
 
     static String getAnimalName(Animal a) {
@@ -46,6 +40,13 @@ class Application {
 
         return name;
     }
+}
+
+/** simplified version of App*/
+class Application2 {
+    static String getAnimalName(Animal a) {
+        return a.getName();
+    }    
 }
 
 /**
