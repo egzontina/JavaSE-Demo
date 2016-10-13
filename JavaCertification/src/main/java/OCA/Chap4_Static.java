@@ -3,7 +3,8 @@ package OCA;
 import java.util.ArrayList;
 
 public class Chap4_Static {
-
+    public static void main(String[] args) {
+    }
 }
 
 /**

@@ -181,7 +181,7 @@ public class Chap3_ArrayList {
         one.add("abc");
         List<String> two = new ArrayList<>();
         two.add("abc");
-        System.out.println(one == two); // false | the variables do not point to the same object
+        System.out.println(one == two); // false | the variables reference do not point to the same object
         System.out.println(one.equals(two)); // true | same element in the same order
     }
 

@@ -37,6 +37,10 @@ class Chimpanzee extends Ape {
      */
 }
 
+// cannot extend final class
+final class test {}
+//class testExtends extends test {}
+
 //@formatter:on
 
 /**

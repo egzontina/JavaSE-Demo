@@ -9,12 +9,14 @@ public class TestClass {
      * Main Method
      * @param args
      */
-    public static void main(String[] args) {
-
-        // Add any print statements here
-        System.out.println("Hello World!");
-    }
-
-    // Add test code here
+        public static void main(String[] args) {
+            try { 
+                return; 
+            } 
+            finally {
+                System.out.println( "Finally" ); 
+            } 
+        } 
+    
 
 }
