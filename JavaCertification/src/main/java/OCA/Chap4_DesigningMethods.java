@@ -101,6 +101,7 @@ class testClasse7 {
  */
 class testClasse8 {
     
+    public void walk0(int ...nums) { }
     public void walk1(int... nums) { }
     public void walk2(int start, int... nums) { }
     // public void walk3(int... nums, int start) { } // DOES NOT COMPILE
