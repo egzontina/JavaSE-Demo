@@ -106,6 +106,8 @@ class Mouse {
     private int numWhiskers;
     private int weight;
 
+    public Mouse(){} // default contructor can be call using this();
+    
     public Mouse(int weight) {
         this(weight, 16); // calls constructor with 2 parameters
     }
@@ -115,6 +117,7 @@ class Mouse {
     }
 
     public Mouse(int weight, int numTeeth, int numWhiskers) {
+
         this.weight = weight;
         this.numTeeth = numTeeth;
         this.numWhiskers = numWhiskers;
@@ -239,7 +242,8 @@ class YetMoreInitializationOrder {
     }
 
     public static void main(String[] args) {
+        System.out.println("main ");
     }
-    
-    // The correct answer is 2 4 6 8 5
+
+    // The correct answer is 2 4 6 8 5 main
 }

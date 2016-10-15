@@ -95,6 +95,7 @@ class PredicateSearch {
     public static void main(String[] args) {
         List<Animal> animals = new ArrayList<Animal>();
         animals.add(new Animal("fish", false, true));
+        
 
         print(animals, a -> a.canHop());
     }

@@ -77,7 +77,7 @@ class Initializers {
     }
 
     /* static initializer, run hen the class is used first */
-    
+
     private static final int NUM_SECONDS_PER_HOUR;
     static {
         int numSecondsPerMinute = 60;
@@ -85,14 +85,16 @@ class Initializers {
         NUM_SECONDS_PER_HOUR = numSecondsPerMinute * numMinutesPerHour;
     }
 
+    private int zero;
     private static int one;
     private static final int two;
     private static final int three = 3;
     // private static final int four; // DOES NOT COMPILE, final variable never gets initialized
     static {
+        // zero = 5; // can't make a static reference to a non static field
         one = 1;
         two = 2;
-        // three = 3; // DOES NOT COMPILE, not alloweb to asign it again 
+        // three = 3; // DOES NOT COMPILE, not alloweb to asign it again
         // two = 4; // DOES NOT COMPILE, seond attemps
     }
 }
